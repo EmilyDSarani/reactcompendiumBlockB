@@ -10,6 +10,7 @@ export default function Compendium() {
     async function getCharacters(){
         const characterList = await fetchCharacters();
         setCharacters(characterList);  
+        setLoading(false);
     }
         getCharacters();
     }, []);
@@ -18,10 +19,9 @@ export default function Compendium() {
         return <h1>Welcome to Hogwarts</h1>;
     }
     
-
     return (
         <div>
-            
+            <characterList characters={characters} />
         </div>
     )
 }
