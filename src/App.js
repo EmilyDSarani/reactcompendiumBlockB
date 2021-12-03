@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Compendium from './views/Compendium/Compendium'
 import './App.css';
 
