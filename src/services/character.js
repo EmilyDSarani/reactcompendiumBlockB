@@ -4,9 +4,15 @@ export const fetchCharacters = async () => {
     const response = await fetch('http://hp-api.herokuapp.com/api/characters'
     );
     const characterData = await response.json();
-    console.log(characterData[0])
+    
     return characterData; 
 }
 
+export const fetchCharacterHouses = async () => {
+    const response = await fetch('http://hp-api.herokuapp.com/api/characters/house/:house');
 
-//http://hp-api.herokuapp.com/api/characters/house/:house  to sort by house
+    const houseTypeData = await response.json();
+    const houseTypeMapped = houseTypeData.map((houseType) => houseType.house);
+    return houseTypeMapped;
+}
+
