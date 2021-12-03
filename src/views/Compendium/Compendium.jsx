@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import { fetchCharacters } from '../../services/character';
 import  CharacterList  from '../../components/CharacterList/CharacterList'
-import Characters from '../../components/Characters/Characters';
+
 
 //Compendium is where the magic is happening
 export default function Compendium() {
@@ -25,10 +25,10 @@ export default function Compendium() {
     if(loading){
         return <h1>Welcome to Hogwarts</h1>;
     }
-    // pass state down to CharacterList
+    // pass state down to CharacterList, this way I can set each of my characters to that state as I map through them. 
     return (
         <div>
-            <Characters characters={characters} />
+            
             <CharacterList characters={characters} />
         </div>
     )
