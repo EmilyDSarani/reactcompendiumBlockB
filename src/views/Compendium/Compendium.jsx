@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import { fetchCharacters } from '../../services/character';
+import  CharacterList  from '../../components/CharacterList/CharacterList'
 
 export default function Compendium() {
     const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ export default function Compendium() {
     
     return (
         <div>
-            <characterList characters={characters} />
+            <CharacterList characters={characters} />
         </div>
     )
 }
