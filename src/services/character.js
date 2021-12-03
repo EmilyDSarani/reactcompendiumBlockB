@@ -8,11 +8,12 @@ export const fetchCharacters = async () => {
     return characterData; 
 }
 
-export const fetchCharacterHouses = async () => {
-    const response = await fetch('http://hp-api.herokuapp.com/api/characters/house/:house');
-
+export const fetchCharacterHouses = async (house) => {
+    const response = await fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`);
+    //this will give me all the houses of the houses I provide...so hard-coding it might make it easier
     const houseTypeData = await response.json();
     const houseTypeMapped = houseTypeData.map((houseType) => houseType.house);
+    console.log(response.house)
     return houseTypeMapped;
 }
 
