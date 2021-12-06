@@ -72,7 +72,9 @@ export default function Compendium() {
             filterHouses={filterHouses}
             houses={houses}
             selectedHouse={selectedHouse}
-            setSelectedHouse={setSelectedHouse} />
+            setSelectedHouse={setSelectedHouse}
+            students={students}
+            staff={staff} />
             <CharacterList characters={characters} />
         </div>
     )
