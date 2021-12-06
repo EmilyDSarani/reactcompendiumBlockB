@@ -45,7 +45,7 @@ export default function Compendium() {
         }
         }
         getHouses();
-    }, [selectedHouse]
+    }, [characterBank, selectedHouse]
     
     );
     // useEffect(()=> {
