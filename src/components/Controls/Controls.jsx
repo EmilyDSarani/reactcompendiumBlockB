@@ -18,4 +18,4 @@ export default function Controls({
             staff={staff} />
         </div>
     )
-}
+} 
