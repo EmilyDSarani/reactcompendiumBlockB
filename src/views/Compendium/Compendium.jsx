@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import {fetchCharacters, fetchStaff, fetchStudents, filterCharactersByHouse } from '../../services/character';
+import {fetchCharacters} from '../../services/character';
 import  CharacterList  from '../../components/CharacterList/CharacterList'
 import Controls from '../../components/Controls/Controls';
 
@@ -14,8 +14,8 @@ export default function Compendium() {
     const [selectedHouse, setSelectedHouse] = useState('all')
     const [filterHouses, setHouses] = useState([])
     const [characterBank, setCharacterBank] = useState([])
-    const [students, setStudent] = useState([]);
-    const [staff, setStaff] = useState([]);
+    // const [students, setStudent] = useState([]);
+    // const [staff, setStaff] = useState([]);
     const houses = ['Gryffindor', 'Ravenclaw', 'Hufflepuff', 'Slytherin']
 //useEffect is a hook. By using it, you are telling react that you want your component to do something after render. It also runs after every render.
 //...maybe...think of it as..."after render", in lieu of mounting. 
@@ -56,7 +56,7 @@ export default function Compendium() {
     //         if(students === 'student'){
     //             const studentList = await fetchStudents(); 
     //             setStudent(studentList);
-    //         } else (staff === 'staff') {
+    //         } else (staff === 'staff'){
     //             const staffList = await fetchStaff()
     //         }
     //     }
@@ -73,8 +73,9 @@ export default function Compendium() {
             houses={houses}
             selectedHouse={selectedHouse}
             setSelectedHouse={setSelectedHouse}
-            students={students}
-            staff={staff} />
+            // students={students}
+            // staff={staff} 
+            />
             <CharacterList characters={characters} />
         </div>
     )
